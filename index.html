@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>YouTube Mp3 Downloader</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script src="download.js"></script>
+	</head>
+	<body>
+		<h1>PiBird YouTube MP3 Downloader</h1>
+		<div id="inputarea" class="slice33">
+			<h2>Enter URL Here</h2>
+			<p>Paste a YouTube URL here and the mp3 file will be downloaded to the PiBird.</p>
+			<form id="fakeform" onsubmit="return formsubmit()" action="#">
+				<input type="text" id="INPUTURL" name="INPUTURL"><br>
+				<input type="submit" value="Add to Queue">
+			</form>
+		</div>
+		<div id="queue" class="slice33">
+			<h2>The Queue</h2>
+			<table>
+				<thead>
+					<tr><th>URL</th><th>Cancel</th></tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<div id="processing" class="slice33">
+			<h2>Processing</h2>
+			<div id="currenturl" class="url"></div>
+			<iframe id="outputframe" name="output" src="cgi-bin/download.sh"></iframe>
+		</div>
+		<div id="hidden" class="hidden">
+			<form id="realform" method="post" action="/cgi-bin/download.sh" target="output">
+				<input type="text" id="THEURL" name="THEURL"><br>
+				<input type="submit" value="Download">
+			</form>
+		</div>
+	</body>
+</html>

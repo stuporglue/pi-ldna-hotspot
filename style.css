@@ -1,0 +1,55 @@
+.deletebutton {
+	color: red;
+	padding: 0px 1px 1px 0px;
+}
+
+.deletebutton:hover {
+	cursor: pointer;
+	color: darkred;
+	padding: 1px 0px 0px 1px;
+}
+
+.url {
+	text-decoration: underline;
+	color: blue;
+}
+
+.url:hover {
+	cursor: pointer;
+	color: darkblue;
+}
+
+
+.hidden,#hidden {
+	display: none;
+}
+
+.slice33 {
+	width: 32%;
+	padding: 10px;
+	display: inline-block;
+	vertical-align: top;
+	min-width: 400px;
+	box-sizing:border-box;
+}
+
+#queue table {
+	width: 100%;
+}
+
+#queue tbody td {
+	border: 1px solid #ccc;
+}
+
+#queue tbody td:last-child {
+	text-align: center;
+}
+
+#queue tbody tr:nth-child(odd) {
+	background-color: #ddddff
+}
+
+input[type=text],iframe {
+	width: 100%;
+	box-sizing:border-box;
+}
