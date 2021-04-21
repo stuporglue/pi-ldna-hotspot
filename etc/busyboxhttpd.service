@@ -1,0 +1,10 @@
+[Unit]
+Description=Busybox httpd daemon. See /etc/httpd.conf
+After=network.target auditd.service
+[Service]
+Type=forking
+RemainAfterExit=yes
+ExecStart=/usr/bin/httpd
+[Install]
+WantedBy=multi-user.target
+Alias=httpd
